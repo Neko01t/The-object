@@ -2,11 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import ReactLenis from 'lenis/react'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className="selection:bg-primary selection:font-secondary dark " >
-      <App />
-    </div>
+    <ReactLenis root>
+      <div className="selection:bg-primary selection:text-secondary" >
+        <App />
+      </div>
+    </ReactLenis>
   </StrictMode>,
 )
